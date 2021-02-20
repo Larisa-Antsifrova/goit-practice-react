@@ -1,7 +1,9 @@
-
-
-const Page = ({title}) => {
-  return <h1>{title}</h1>;
+const Page = ({ title, date }) => {
+  return (<>
+    <h1>Hello React!</h1>
+    <h2>{title}</h2>
+    <p>Today is {date}.</p>
+  </>);
 };
 
 export default Page;
