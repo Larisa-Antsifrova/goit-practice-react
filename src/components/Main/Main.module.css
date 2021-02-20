@@ -1,3 +1,13 @@
+body {
+  background-color: black;
+  color: wheat;
+}
+
 .title {
   text-align: center;
+}
+
+:global(.container) {
+  width: 80%;
+  margin: 0 auto;
 }
