@@ -8,7 +8,7 @@ const today = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 // Composing App
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Page title="This is home page." date={today} />
     </div>
   );

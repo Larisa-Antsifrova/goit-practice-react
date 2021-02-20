@@ -2,3 +2,9 @@ body {
   background-color: black;
   color: wheat;
 }
+
+.container {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
