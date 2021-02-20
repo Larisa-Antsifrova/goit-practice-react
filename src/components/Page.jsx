@@ -1,5 +1,5 @@
 import Button from "./Button";
-import InputwithLabel from './Input';
+import Form from './Form';
 
 
 const Page = ({ title, date }) => {
@@ -12,14 +12,7 @@ const Page = ({ title, date }) => {
      <Button text="Click" />
     <Button text="Send" />
     <hr/>
-    <div>
-      <p>Here comes the new form:</p>
-      <InputwithLabel id="name" labelText="Your name" inputType="text" name="name" placeholder="Type in your name!" />
-      <br/>
-      <InputwithLabel id="email" labelText="Your email" inputType="email" name="email" placeholder="Type in your email!" />
-      <br/>
-    <InputwithLabel id="number" labelText="Your number" inputType="tel" name="number" placeholder="Type in your number!"/>
-    </div>
+    <Form/>
   </>);
 };
 

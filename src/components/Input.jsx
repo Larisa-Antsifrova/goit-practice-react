@@ -1,9 +1,8 @@
-const InputwithLabel = ({ id, labelText, inputType, name, placeholder }) => {
+const InputwithLabel = ({ id, labelText, inputType, name, placeholder, min, max}) => {
   return (<>
     <label htmlFor={id}>{labelText}</label>
     <br/>
-    <input type={inputType} id={id} name={name} placeholder={placeholder}></input>
-    
+    <input type={inputType} id={id} name={name} placeholder={placeholder} min={min} max={max}></input>
   </>)
 };
 
