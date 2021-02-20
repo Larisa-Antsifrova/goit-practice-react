@@ -1,0 +1,19 @@
+.header {
+  padding: 20px;
+  background-color: pink;
+  color: black;
+}
+
+nav {
+  display: flex;
+}
+
+.navList {
+  margin-left: auto;
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 20px;
+}

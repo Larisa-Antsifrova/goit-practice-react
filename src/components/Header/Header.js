@@ -1,12 +1,13 @@
 import React from "react";
+import styles from "./Header.module.css";
 
 const Header = function () {
   return (
-    <header>
+    <header className={styles.header}>
       <nav>
         <a href="#">LOGO</a>
 
-        <ul>
+        <ul className={styles.navList}>
           <li>
             <a href="#">First</a>
           </li>
