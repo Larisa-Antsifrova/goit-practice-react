@@ -1,10 +1,10 @@
 import "./App.css";
+import Page from "./components/Page.jsx";
 
 function App() {
   return (
     <div className="App">
-      <h1>Practice Session 20.02</h1>
-      <p>Here we come!</p>
+      <Page title="Hello React! This is home page." />
     </div>
   );
 }
