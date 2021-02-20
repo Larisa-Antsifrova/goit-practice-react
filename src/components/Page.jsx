@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Form from './Form';
 
-
+// Common Home page component that incorporates titles, buttons, and form
 const Page = ({ title, date }) => {
   return (<>
     <h1>Hello React!</h1>

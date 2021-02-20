@@ -1,6 +1,7 @@
 import InputwithLabel from './Input';
 import Button from './Button';
 
+// Feedback form component
 const Form = () => {
   return (
     <form action="">

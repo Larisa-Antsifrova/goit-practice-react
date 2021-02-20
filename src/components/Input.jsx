@@ -1,4 +1,5 @@
-const InputwithLabel = ({ id, labelText, inputType, name, placeholder, min, max}) => {
+// Input component with a lot of props to customize instances
+const InputwithLabel = ({ id, labelText, inputType, name, placeholder, min, max }) => {
   return (<>
     <label htmlFor={id}>{labelText}</label>
     <br/>
