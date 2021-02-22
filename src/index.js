@@ -25,11 +25,12 @@ import App from "./App";
 // console.log(jsxLink);
 // ReactDOM.render(jsxLink, document.getElementById("root"));
 
+// Using JSX capabilities to insert data from model
 const painting = {
   id: "id-1",
   url: "https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg",
   title: "Feathers. Art abstract",
-  price: 500,
+  price: 600,
   author: {
     tag: "ractapopulous",
     url: "https://pixabay.com/users/ractapopulous-24766/",
@@ -40,13 +41,12 @@ const painting = {
 const paintingTemplate = (
   <div className="container">
     <div className="paintingCard">
-      <img
-        src="https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg"
-        alt="Feathers. Art abstract"
-        width="400"
-      />
-      <h2>Feathers. Art abstract</h2>
-      <p>Price: 500</p>
+      <img src={painting.url} alt={painting.title} width="400" />
+      <h2>{painting.title}</h2>
+      <p>
+        By <a href={painting.author.url}>{painting.author.tag}</a>
+      </p>
+      <p>Price: {painting.price}</p>
       <button type="button">Add to my cart</button>
     </div>
   </div>
