@@ -23,9 +23,10 @@ function App() {
       <PaintingCard
         url={painting.url}
         title={painting.title}
-        author={painting.author}
         quantity={painting.quantity}
         price={painting.price}
+        tag={painting.author.tag}
+        authorUrl={painting.author.url}
       />
     </div>
   );
