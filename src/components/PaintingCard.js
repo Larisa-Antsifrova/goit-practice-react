@@ -1,10 +1,12 @@
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
+
 // Importing default image from image file: contains the path to the image
 import defaultImg from "./default.jpg";
 
+// Creating Painting card component
 const PaintingCard = ({ url, title, tag, authorUrl, quantity, price }) => (
-  <div className="paintingCard">
+  <li className="paintingCard">
     <img src={url} alt={title} width="400" />
     <h2>{title}</h2>
     <p>
@@ -13,7 +15,7 @@ const PaintingCard = ({ url, title, tag, authorUrl, quantity, price }) => (
     <p>Price: {price}</p>
     <p>Available: {quantity < 10 ? "Few left" : "In stock"}</p>
     <button type="button">Add to my cart</button>
-  </div>
+  </li>
 );
 
 // Assigning default values to properties
@@ -23,12 +25,12 @@ PaintingCard.defaultProps = {
 
 // Designating property types
 PaintingCard.propTypes = {
-  url: PropType.string,
-  title: PropType.string.isRequired,
-  tag: PropType.string.isRequired,
-  authorUrl: PropType.string.isRequired,
-  quantity: PropType.number.isRequired,
-  price: PropType.number.isRequired,
+  url: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  authorUrl: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
 export default PaintingCard;
