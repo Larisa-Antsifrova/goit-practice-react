@@ -1,14 +1,23 @@
-const PaintingCard = ({ painting }) => (
+import React from "react";
+// Importing default image from image file: contains the path to the image
+import defaultImg from "./default.jpg";
+
+const PaintingCard = ({ url, title, author, quantity, price }) => (
   <div className="paintingCard">
-    <img src={painting.url} alt={painting.title} width="400" />
-    <h2>{painting.title}</h2>
+    <img src={url} alt={title} width="400" />
+    <h2>{title}</h2>
     <p>
-      By <a href={painting.author.url}>{painting.author.tag}</a>
+      By <a href={author.url}>{author.tag}</a>
     </p>
-    <p>Price: {painting.price}</p>
-    <p>Available: {painting.quantity < 10 ? "Few left" : "In stock"}</p>
+    <p>Price: {price}</p>
+    <p>Available: {quantity < 10 ? "Few left" : "In stock"}</p>
     <button type="button">Add to my cart</button>
   </div>
 );
+
+// Assigning default values to properties
+PaintingCard.defaultProps = {
+  url: defaultImg,
+};
 
 export default PaintingCard;

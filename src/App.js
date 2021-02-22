@@ -20,7 +20,13 @@ const painting = {
 function App() {
   return (
     <div className="container">
-      <PaintingCard painting={painting} />
+      <PaintingCard
+        url={painting.url}
+        title={painting.title}
+        author={painting.author}
+        quantity={painting.quantity}
+        price={painting.price}
+      />
     </div>
   );
 }
