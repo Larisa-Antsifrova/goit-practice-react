@@ -2,10 +2,12 @@ import React from 'react';
 import PaintingCard from '../PaintingCard/PaintingCard';
 import PropTypes from 'prop-types';
 
+import './PaintingList.css';
+
 // Creating Painting list component
 const PaintingList = ({ paintings }) => {
   return (
-    <ul>
+    <ul className="PaintingList">
       {paintings.map(
         ({
           id,

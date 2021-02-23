@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './PaintingCard.css';
 // Importing default image from image file: contains the path to the image
 import defaultImg from './default.jpg';
 
