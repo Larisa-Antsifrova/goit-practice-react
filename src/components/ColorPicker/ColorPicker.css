@@ -1,0 +1,8 @@
+.ColorPicker__option {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border: 2px solid wheat;
+}

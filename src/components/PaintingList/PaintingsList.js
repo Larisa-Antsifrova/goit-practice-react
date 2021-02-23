@@ -1,5 +1,5 @@
 import React from 'react';
-import PaintingCard from './PaintingCard';
+import PaintingCard from '../PaintingCard/PaintingCard';
 import PropTypes from 'prop-types';
 
 // Creating Painting list component

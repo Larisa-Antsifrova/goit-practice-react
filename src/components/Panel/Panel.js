@@ -1,9 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+// Inline styles example
+const styles = {
+  container: {
+    backgroundColor: 'pink',
+    padding: '10px',
+    color: 'black',
+  },
+};
+
 // Creating Panel component
 const Panel = ({ title, children }) => (
-  <div>
+  <div style={styles.container}>
     {title && <h1>{title}</h1>}
     {children}
   </div>
