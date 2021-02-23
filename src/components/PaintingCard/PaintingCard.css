@@ -2,4 +2,7 @@
   width: 300px;
   border: 2px solid wheat;
   border-radius: 7px;
+
+  text-align: center;
+  padding: 20px;
 }

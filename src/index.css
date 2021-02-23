@@ -19,6 +19,7 @@ img {
   height: auto;
   display: block;
 }
+
 a {
   color: wheat;
 }
@@ -26,9 +27,4 @@ a {
 .container {
   width: 80%;
   margin: 0 auto;
-}
-
-.paintingCard {
-  text-align: center;
-  padding: 20px;
 }
