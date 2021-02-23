@@ -3,6 +3,7 @@ import PaintingList from './components/PaintingList/PaintingsList';
 import paintings from './paintings.json';
 import Panel from './components/Panel/Panel';
 import ColorPicker from './components/ColorPicker/ColorPicker';
+import Notification from './components/Notification/Notification';
 
 // Colors option object
 const colorPickerOptions = [
@@ -19,6 +20,10 @@ function App() {
   return (
     <div className="container">
       <ColorPicker options={colorPickerOptions} />
+      <Notification text="Notification component" state="normal" />
+      <Notification text="Notification component" state="warning" />
+      <Notification text="Notification component" state="error" />
+      <Notification text="Notification component" state="success" />
       <Panel title="Gallery Paintings">
         <p>Here you will find paintings by our well-known authors.</p>
         <p>Put on some nice music and enjoy!</p>

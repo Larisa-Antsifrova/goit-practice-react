@@ -1,0 +1,28 @@
+.notification {
+  line-height: 1.5;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+
+  color: white;
+}
+
+.normal {
+  composes: notification;
+  background-color: grey;
+}
+
+.error {
+  composes: notification;
+  background-color: red;
+}
+
+.success {
+  composes: notification;
+  background-color: green;
+}
+
+.warning {
+  composes: notification;
+  background-color: orange;
+}
