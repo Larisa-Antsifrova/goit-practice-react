@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import style from './Panel.module.css';
 
 // Inline styles example
 const styles = {
   container: {
-    backgroundColor: 'pink',
     padding: '10px',
     color: 'black',
   },
@@ -12,8 +12,8 @@ const styles = {
 
 // Creating Panel component
 const Panel = ({ title, children }) => (
-  <div style={styles.container}>
-    {title && <h1>{title}</h1>}
+  <div className={style.Panel} style={styles.container}>
+    {title && <h1 className={style.title}>{title}</h1>}
     {children}
   </div>
 );
