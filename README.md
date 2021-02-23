@@ -11,3 +11,4 @@
 ## Following recorded lectures
 
 - Module 1. Lecture 1
+- Module 1. Lecture 2
