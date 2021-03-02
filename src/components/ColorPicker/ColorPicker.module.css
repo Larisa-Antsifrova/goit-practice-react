@@ -22,3 +22,9 @@
 .ColorPicker__option--active {
   transform: scale(1.2);
 }
+
+.label {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
