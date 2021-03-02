@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import styles from './Counter.module.css';
 
 class Counter extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: 0,
-    };
-  }
+  state = {
+    value: 0,
+  };
 
   handleDecrement = event => {
     console.log('event target', event.target);
