@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Controls.module.css';
 
@@ -13,6 +14,11 @@ const Controls = ({ onIncrement, onDecrement }) => {
       </button>
     </div>
   );
+};
+
+Controls.propTypes = {
+  onDecrement: PropTypes.func.isRequired,
+  onIncrement: PropTypes.func.isRequired,
 };
 
 export default Controls;
