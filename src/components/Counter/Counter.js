@@ -2,32 +2,32 @@ import React, { Component } from 'react';
 import styles from './Counter.module.css';
 
 class Counter extends Component {
+  static defaultProps = {
+    initialValue: 0,
+  };
+
+  static propTypes = {
+    //
+  };
+
   state = {
-    value: 0,
+    value: this.props.initialValue,
   };
 
-  handleDecrement = event => {
-    console.log('event target', event.target);
-    console.log('Hello, I am right button');
-    console.log(this);
+  handleDecrement = () => {
+    if (this.state.value < 1) {
+      return;
+    }
 
-    const { target } = event;
-
-    setTimeout(() => {
-      console.log('event target in Decrement STO', target);
-    }, 1000);
+    this.setState(prevState => ({
+      value: prevState.value - 1,
+    }));
   };
 
-  handleIncrement = event => {
-    console.log('event type', event.type);
-    console.log('Hello, I am left button');
-    console.log(this);
-
-    const { target } = event;
-
-    setTimeout(() => {
-      console.log('event type in Increment STO', target);
-    }, 1000);
+  handleIncrement = () => {
+    this.setState(prevState => ({
+      value: prevState.value + 1,
+    }));
   };
 
   render() {
