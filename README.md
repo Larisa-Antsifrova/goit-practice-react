@@ -12,3 +12,5 @@
 
 - Module 1. Lecture 1
 - Module 1. Lecture 2
+
+- Module 2. Lecture 1
