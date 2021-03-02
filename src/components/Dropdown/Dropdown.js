@@ -3,6 +3,22 @@ import React, { Component } from 'react';
 import styles from './Dropdown.module.css';
 
 class Dropdown extends Component {
+  state = {
+    visible: false,
+  };
+
+  toggle = () => {
+    this.setState(prevState => ({ visible: !prevState.visible }));
+  };
+
+  // show = () => {
+  //   this.setState({ visible: true });
+  // };
+
+  // hide = () => {
+  //   this.setState({ visible: false });
+  // };
+
   render() {
     return (
       <div className={styles.Dropdown}>
@@ -11,10 +27,12 @@ class Dropdown extends Component {
           className={styles.Dropdown__toggle}
           onClick={this.toggle}
         >
-          Show
+          {this.state.visible ? 'Hide' : 'Show'}
         </button>
 
-        <div className={styles.Dropdown__menu}>Dropdown Menu</div>
+        {this.state.visible && (
+          <div className={styles.Dropdown__menu}>Dropdown Menu</div>
+        )}
       </div>
     );
   }
