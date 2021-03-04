@@ -3,6 +3,7 @@
 ## Practice sessions
 
 - 20 Feb - React basic componets
+- 06 Mar - React class components
 
 ## Following live webinars
 
