@@ -6,6 +6,7 @@ class Form extends Component {
     name: '',
     nickname: '',
     email: '',
+    experience: 'junior',
   };
 
   nameInputId = shortid.generate();
@@ -31,6 +32,7 @@ class Form extends Component {
       name: '',
       nickname: '',
       email: '',
+      experience: 'junior',
     });
   };
 
@@ -62,6 +64,37 @@ class Form extends Component {
             value={this.state.email}
             onChange={this.handleInputChange}
           />
+        </label>
+        <p>Your experience level:</p>
+        <label>
+          <input
+            type="radio"
+            name="experience"
+            value="junior"
+            onChange={this.handleInputChange}
+            checked={this.state.experience === 'junior'}
+          />{' '}
+          Junior
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="experience"
+            value="middle"
+            onChange={this.handleInputChange}
+            checked={this.state.experience === 'middle'}
+          />{' '}
+          Middle
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="experience"
+            value="senior"
+            onChange={this.handleInputChange}
+            checked={this.state.experience === 'senior'}
+          />{' '}
+          Senior
         </label>
         <button type="submit">Submit</button>
       </form>
