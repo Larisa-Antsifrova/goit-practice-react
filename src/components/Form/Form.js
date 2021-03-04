@@ -8,6 +8,8 @@ class Form extends Component {
     email: '',
   };
 
+  nameInputId = shortid.generate();
+
   handleInputChange = event => {
     const { name, value } = event.currentTarget;
 
@@ -35,15 +37,14 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name{' '}
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleInputChange}
-          />
-        </label>
+        <label htmlFor={this.nameInputId}>Name </label>
+        <input
+          id={this.nameInputId}
+          type="text"
+          name="name"
+          value={this.state.name}
+          onChange={this.handleInputChange}
+        />
         <label>
           Nickname{' '}
           <input
