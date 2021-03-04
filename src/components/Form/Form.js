@@ -7,6 +7,7 @@ class Form extends Component {
     nickname: '',
     email: '',
     experience: 'junior',
+    agreement: false,
   };
 
   nameInputId = shortid.generate();
@@ -17,6 +18,14 @@ class Form extends Component {
     this.setState({
       [name]: value,
     });
+  };
+
+  handleAgreement = event => {
+    this.setState({
+      agreement: event.currentTarget.checked,
+    });
+
+    console.log(event.currentTarget.checked);
   };
 
   handleSubmit = e => {
@@ -33,6 +42,7 @@ class Form extends Component {
       nickname: '',
       email: '',
       experience: 'junior',
+      agreement: false,
     });
   };
 
@@ -96,7 +106,19 @@ class Form extends Component {
           />{' '}
           Senior
         </label>
-        <button type="submit">Submit</button>
+        <p>Conditions</p>
+        <label>
+          <input
+            type="checkbox"
+            name="agreement"
+            checked={this.state.agreement}
+            onChange={this.handleAgreement}
+          />
+          I agree
+        </label>
+        <button type="submit" disabled={!this.state.agreement}>
+          Submit
+        </button>
       </form>
     );
   }
