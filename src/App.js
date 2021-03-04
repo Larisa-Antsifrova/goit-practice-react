@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Counter from './components/Counter';
-import Dropdown from './components/Dropdown';
-import ColorPicker from './components/ColorPicker';
+
 import ToDoList from './components/ToDoList';
 
-import options from './db/options.json';
 import todos from './db/todos.json';
 
 class App extends Component {
@@ -28,19 +25,12 @@ class App extends Component {
 
     return (
       <>
+        <h2>Form</h2>
+
         <h2>To Do List</h2>
         <p className="temporary-p">Total: {totalToDoCount}</p>
         <p className="temporary-p">Completed: {completedToDoCount}</p>
         <ToDoList todos={todos} onDeleteToDo={this.deleteToDo} />
-
-        <h2>Counter</h2>
-        <Counter />
-
-        <h2>Dropdown</h2>
-        <Dropdown />
-
-        <h2>Color Picker</h2>
-        <ColorPicker options={options} />
       </>
     );
   }
