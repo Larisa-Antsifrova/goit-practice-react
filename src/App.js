@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-
 import ToDoList from './components/ToDoList';
+import Form from './components/Form';
 
 import todos from './db/todos.json';
-
 class App extends Component {
-  state = { todos: todos };
+  state = {
+    todos: todos,
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log('Submitted!');
+  };
 
   deleteToDo = toDoId => {
     this.setState(prevState => {
@@ -26,6 +32,7 @@ class App extends Component {
     return (
       <>
         <h2>Form</h2>
+        <Form />
 
         <h2>To Do List</h2>
         <p className="temporary-p">Total: {totalToDoCount}</p>
