@@ -8,9 +8,10 @@ class App extends Component {
     todos: todos,
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log('Submitted!');
+  formSubmitHandler = data => {
+    setTimeout(() => {
+      console.log(data);
+    }, 1000);
   };
 
   deleteToDo = toDoId => {
@@ -32,7 +33,7 @@ class App extends Component {
     return (
       <>
         <h2>Form</h2>
-        <Form />
+        <Form onSubmit={this.formSubmitHandler} />
 
         <h2>To Do List</h2>
         <p className="temporary-p">Total: {totalToDoCount}</p>
