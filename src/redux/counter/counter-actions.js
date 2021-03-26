@@ -1,9 +1,11 @@
+import { INCREMENT, DECREMENT } from './counter-action-types';
+
 export const increment = value => ({
-  type: 'counter/Increment',
+  type: INCREMENT,
   payload: value,
 });
 
 export const decrement = value => ({
-  type: 'counter/Decrement',
+  type: DECREMENT,
   payload: value,
 });
