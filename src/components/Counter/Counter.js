@@ -6,17 +6,17 @@ import Value from './Value/Value';
 
 import styles from './Counter.module.css';
 
-const Counter = ({ value, onIncrement, onDecrement }) => {
+const Counter = ({ counterValue, onIncrement, onDecrement }) => {
   return (
     <div className={styles.Counter}>
-      <Value value={value} />
+      <Value value={counterValue} />
       <Controls onIncrement={onIncrement} onDecrement={onDecrement} />
     </div>
   );
 };
 
-const mapStateToProps = state => ({
-  value: state.counterValue,
+const mapStateToProps = ({ counterValue }) => ({
+  counterValue,
 });
 
 const mapDispatchToProps = dispatch => ({
