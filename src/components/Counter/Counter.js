@@ -6,22 +6,27 @@ import Value from './Value/Value';
 
 import styles from './Counter.module.css';
 
-const Counter = ({ counterValue, onIncrement, onDecrement }) => {
+const Counter = ({ value, step, onIncrement, onDecrement }) => {
   return (
     <div className={styles.Counter}>
-      <Value value={counterValue} />
-      <Controls onIncrement={onIncrement} onDecrement={onDecrement} />
+      <Value value={value} />
+      <Controls
+        step={step}
+        onIncrement={() => onIncrement(step)}
+        onDecrement={() => onDecrement(step)}
+      />
     </div>
   );
 };
 
-const mapStateToProps = ({ counterValue }) => ({
-  counterValue,
+const mapStateToProps = state => ({
+  value: state.counter.value,
+  step: state.counter.step,
 });
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement: () => dispatch(increment(1)),
-  onDecrement: () => dispatch(decrement(1)),
+  onIncrement: step => dispatch(increment(step)),
+  onDecrement: step => dispatch(decrement(step)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

@@ -1,15 +1,32 @@
 import { createStore } from 'redux';
 
-const initialState = { counterValue: 0 };
+const initialState = {
+  counter: {
+    value: 0,
+    step: 5,
+  },
+};
 
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case 'counter/Increment':
-      return { counterValue: state.counterValue + payload };
+      return {
+        ...state,
+        counter: {
+          ...state.counter,
+          value: state.counter.value + payload,
+        },
+      };
     case 'counter/Decrement':
       return {
-        counterValue:
-          state.counterValue - payload < 0 ? 0 : state.counterValue - payload,
+        ...state,
+        counter: {
+          ...state.counter,
+          value:
+            state.counter.value - payload < 0
+              ? 0
+              : state.counter.value - payload,
+        },
       };
     default:
       return state;
