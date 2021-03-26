@@ -1,0 +1,36 @@
+.TodoList {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.TodoList__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 7px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.TodoList__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 10px;
+
+  outline: none;
+  border: none;
+  border-radius: 10px;
+
+  color: brown;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: brown;
+  color: white;
+}
