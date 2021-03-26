@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { increment, decrement } from '../../redux/actions';
+import { increment, decrement } from '../../redux/counter/counter-actions';
 import Controls from './Controls/Controls';
 import Value from './Value/Value';
 
