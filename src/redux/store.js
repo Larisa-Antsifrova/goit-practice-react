@@ -7,7 +7,10 @@ const reducer = (state = initialState, { type, payload }) => {
     case 'counter/Increment':
       return { counterValue: state.counterValue + payload };
     case 'counter/Decrement':
-      return { counterValue: state.counterValue - payload };
+      return {
+        counterValue:
+          state.counterValue - payload < 0 ? 0 : state.counterValue - payload,
+      };
     default:
       return state;
   }
