@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
+// Components
 import Container from './components/Container';
-import TodoList from './components/TodoList';
-import TodoEditor from './components/TodoEditor';
-import Filter from './components/TodoFilter';
-import Modal from './components/Modal';
 import IconButton from './components/IconButton';
 import { ReactComponent as AddIcon } from './icons/add.svg';
+import TodoEditor from './components/TodoEditor';
+import Filter from './components/TodoFilter';
+import TodoList from './components/TodoList';
+import Modal from './components/Modal';
 
 // import initialTodos from './todos.json';
 
@@ -27,13 +28,10 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log('App componentDidUpdate');
-
     const nextTodos = this.state.todos;
     const prevTodos = prevState.todos;
 
     if (nextTodos !== prevTodos) {
-      console.log('Обновилось поле todos, записываю todos в хранилище');
       localStorage.setItem('todos', JSON.stringify(nextTodos));
     }
 
@@ -53,7 +51,7 @@ class App extends Component {
       todos: [todo, ...todos],
     }));
 
-    // this.toggleModal();
+    this.toggleModal();
   };
 
   deleteTodo = todoId => {
@@ -112,7 +110,7 @@ class App extends Component {
 
         {showModal && (
           <Modal onClose={this.toggleModal}>
-            <TodoEditor onSubmit={this.addTodo} />
+            <TodoEditor onSubmit={this.addTodo} onSave={this.toggleModal} />
           </Modal>
         )}
 
