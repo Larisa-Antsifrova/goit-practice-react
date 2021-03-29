@@ -17,6 +17,8 @@
 - Module 2. Lecture 1
 - Module 2. Lecture 2
 
+- Module 3. Lecture 1
+
 - Module 5. Lecture 1 - Counter to Redux
 - Module 5. Lecture 1 - Todos to Redux
-- Module 5. Lecture 2
+- Module 5. Lecture 2 - Redux Toolkit
