@@ -1,13 +1,12 @@
-// импортируем функцию создания стора
 import { configureStore } from '@reduxjs/toolkit';
-import {getQueryReducer} from './cocktails/cocktails-reducers'
+import {getQueryReducer, fetchCocktailsReducer} from './cocktails/cocktails-reducers'
 
 const store = configureStore({
   reducer: {
     query: getQueryReducer,
+    drinks: fetchCocktailsReducer
 
   }
 });
 
 export { store };
-// экспортируем стор

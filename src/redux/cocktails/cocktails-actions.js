@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const getQuery = createAction('cocktails/getQueryValue', value => ({
-  payload: value,
-}));
+const getQuery = createAction('cocktails/getQueryValue');
 
-export { getQuery };
+const fetchCocktails = createAction('cocktails/fetchCocktails');
+
+export { getQuery, fetchCocktails };

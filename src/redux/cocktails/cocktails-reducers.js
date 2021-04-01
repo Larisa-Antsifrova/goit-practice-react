@@ -1,8 +1,12 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { getQuery } from './cocktails-actions';
+import { getQuery, fetchCocktails } from './cocktails-actions';
 
 const getQueryReducer = createReducer('', {
   [getQuery]: (_, { payload }) => payload,
 });
 
-export { getQueryReducer };
+const fetchCocktailsReducer = createReducer([], {
+  [fetchCocktails]: (_, { payload }) => payload,
+});
+
+export { getQueryReducer, fetchCocktailsReducer };
