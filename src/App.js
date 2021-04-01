@@ -1,3 +1,9 @@
+import React from 'react';
+
+// Import of components
+import Navigation from './components/Navigation';
+import CocktailsPage from './pages/CocktailsPage/CocktailsPage'
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 // импорты
 // переключатель, роут, редирект
@@ -11,6 +17,7 @@ import './App.css'
 function App() {
   return (
     <>
+      <Navigation/>
       <h1>Cocktail Party</h1>
     </>
   )
