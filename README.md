@@ -8,6 +8,7 @@
 ## Following live webinars
 
 - 17 Feb. - React Intro
+- 01 Apr. - Cocktailparty. React Routing. Redux.
 
 ## Following recorded lectures
 
