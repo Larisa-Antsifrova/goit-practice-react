@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {
   getQuery,
   fetchCocktails,
+  toggleModal,
 } from '../../redux/cocktails/cocktails-actions';
 class CocktailsPage extends Component {
   // state = {
@@ -35,6 +36,11 @@ class CocktailsPage extends Component {
     query.value = '';
   };
 
+  toggleModal = () => {
+    const { showModal } = this.props;
+    this.props.toggleModal(!showModal);
+  };
+
   render() {
     const { drinks } = this.props;
 
@@ -44,6 +50,7 @@ class CocktailsPage extends Component {
         <form onSubmit={this.SubmitHandler}>
           <input type="text" name="query" placeholder="Maybe, a drink?" />
         </form>
+        <button onClick={this.toggleModal}>Open Modal</button>
         {drinks ? (
           <ul>
             {drinks.map(drink => (
@@ -61,11 +68,13 @@ class CocktailsPage extends Component {
 const mapStateToProps = state => ({
   drinks: state.drinks,
   query: state.query,
+  showModal: state.showModal,
 });
 
 const mapDispatchToProps = {
   getQuery: getQuery,
   fetchCocktails: fetchCocktails,
+  toggleModal: toggleModal,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CocktailsPage);
