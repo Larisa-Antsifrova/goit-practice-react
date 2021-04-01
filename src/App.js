@@ -1,12 +1,19 @@
-import React from 'react';
+import './App.css'
+// импорты
+// переключатель, роут, редирект
+// массив роутов
+// {connect}
+// экшены и редюсеры
+
+// import { getCocktail } from './services/cocktailsApi'
+// getCocktail('margarita').then((d) => console.log(d))
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello, React!</h1>
-      <p>We will be friends soon!</p>
-    </div>
-  );
+    <>
+      <h1>Cocktail Party</h1>
+    </>
+  )
 }
 
-export default App;
+export default App
