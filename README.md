@@ -4,6 +4,7 @@
 
 - 20 Feb - React basic componets
 - 06 Mar - React class components
+- 30 Apr - Test task
 
 ## Following live webinars
 
