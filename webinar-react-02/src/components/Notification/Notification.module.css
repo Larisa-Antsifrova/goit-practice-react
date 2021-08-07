@@ -1,0 +1,33 @@
+@value notification-normal-bg-color from '../../vars.module.css';
+@value notification-warning-bg-color from '../../vars.module.css';
+@value notification-error-bg-color from '../../vars.module.css';
+@value notification-success-bg-color from '../../vars.module.css';
+
+.notification {
+  line-height: 1.5;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+
+  color: white;
+}
+
+.normal {
+  composes: notification;
+  background-color: notification-normal-bg-color;
+}
+
+.warning {
+  composes: notification;
+  background-color: notification-warning-bg-color;
+}
+
+.error {
+  composes: notification;
+  background-color: notification-error-bg-color;
+}
+
+.success {
+  composes: notification;
+  background-color: notification-success-bg-color;
+}
